@@ -46,7 +46,7 @@ const LogoBar = () => {
       <Box>
         <Flex justify={"space-around"} p="2em 5em 2em 5em">
           {imageData.map((el) => (
-            <Image src={el.src} alt={el.alt} h="30px" />
+            <Image key={el.alt} src={el.src} alt={el.alt} h="30px" />
           ))}
         </Flex>
       </Box>

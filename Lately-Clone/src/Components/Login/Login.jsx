@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -11,11 +11,32 @@ import {
   Input,
   Stack,
   Text,
-  textDecoration,
 } from "@chakra-ui/react";
 import styles from "../Login/login.module.css";
+import axios from "axios";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [token, setToken] = useState(null);
+  const navigate = useNavigate();
+  const handleLogin = async () => {
+    let res = await axios
+      .post("https://reqres.in/api/login", {
+        username: email,
+        email: email,
+        password: email,
+      })
+      .then((res) => {
+        setToken(res.data.token);
+      })
+      .catch((err) => {
+        console.log(err);
+        setToken(null);
+      });
+  };
+  if (token) {
+    navigate("/");
+  }
   return (
     <div>
       <div className={styles.navSticky}>
@@ -39,22 +60,40 @@ const Login = () => {
             <FormLabel ml="2em">Email or Username</FormLabel>
             <Input
               type="text"
+              value={email}
               placeholder="Email or Username"
               w="60%"
               position="static"
               variant={"outline"}
               borderColor="grey"
               borderWidth="3px"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Flex>
-          <Flex justify={"space-between"} alignItems='center' p='1em' ml={"10.3em"} mt='1em'>
-            <Button _hover={{ bgColor: "#515151", color: "white" }}
-                bgColor={"#666666"}
-                color="white"
-                w='100px'
-                position='static'
-                >LOG IN</Button>
-            <a style={{color:"blue",cursor:"pointer"}} _hover={{textDecoration:"none"}} target="_blank">Forgot Password?</a>
+          <Flex
+            justify={"space-between"}
+            alignItems="center"
+            p="1em"
+            ml={"10.3em"}
+            mt="1em"
+          >
+            <Button
+              _hover={{ bgColor: "#515151", color: "white" }}
+              bgColor={"#666666"}
+              color="white"
+              w="100px"
+              position="static"
+              onClick={handleLogin}
+            >
+              LOG IN
+            </Button>
+            <a
+              style={{ color: "blue", cursor: "pointer" }}
+              _hover={{ textDecoration: "none" }}
+              target="_blank"
+            >
+              Forgot Password?
+            </a>
           </Flex>
         </Container>
       </Stack>
