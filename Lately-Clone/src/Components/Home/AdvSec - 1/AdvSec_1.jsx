@@ -1,7 +1,10 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AdvSec_1 = () => {
+
+  const navigate = useNavigate()
   return (
     <Box>
       <Flex bgColor={"#e8f8f2"} p="5em 9em" gap={"3em"}>
@@ -33,6 +36,7 @@ const AdvSec_1 = () => {
             }}
             mt="2em"
             position={"static"}
+            onClick={()=>navigate("/signup")}
           >
             GIVE IT A WHIRL
           </Button>
