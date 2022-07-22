@@ -1,15 +1,8 @@
-import {
-  Box,
-  color,
-  Flex,
-  Heading,
-  Image,
-  StylesProvider,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Styles from "../Footer/footer.module.css";
+import Home from "../Home/Home";
 
 const Data = {
   company: [
@@ -248,13 +241,13 @@ const Footer = () => {
       </Box>
       <Flex justify={"space-between"} p="2em 6em">
         <Box>
-          <Link to={"/"}>
+          <a href="/">
             <Image
               src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7e81a75428f60b5ff0d00_lately-footer-logo.svg"
               alt="footerLogo"
               w={"130px"}
             />
-          </Link>
+          </a>
         </Box>
         <Box>
           <Flex gap={"0.5em"}>
@@ -314,7 +307,13 @@ const Footer = () => {
           </Flex>
         </Box>
       </Flex>
-      <Flex justify={'space-between'} bgColor='#174c43' color={'#C0C0C0'} p='1.4em 7em' fontSize={'sm'}>
+      <Flex
+        justify={"space-between"}
+        bgColor="#174c43"
+        color={"#C0C0C0"}
+        p="1.4em 7em"
+        fontSize={"sm"}
+      >
         <Text>Terms ● Privacy</Text>
         <Text>Copyright © 2022 Lately, Inc. Stone Ridge, NY, USA</Text>
       </Flex>

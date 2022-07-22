@@ -1,11 +1,20 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import AboutSection from './AboutSection/AboutSection'
+import StorySection from './StorySection'
+import VisionSection from './VisionSection'
+import WorkSection from './WorkSection'
+import Footer from "../Footer/Footer"
 
 const Company = () => {
   return (
     <div>
         <Navbar/>
-        <h1>Company Page</h1>
+        <AboutSection/>
+        <StorySection/>
+        <WorkSection/>
+        <VisionSection/>
+        <Footer/>
     </div>
   )
 }
