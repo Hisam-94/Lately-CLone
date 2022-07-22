@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import AdvSec_1 from "./AdvSec - 1/AdvSec_1";
 import AdvSec_2 from "./AdvSec - 2/AdvSec_2";
@@ -17,6 +18,7 @@ const Home = () => {
       <ResultSection/>
       <AdvSec_1/>
       <AdvSec_2/>
+      <Footer/>
     </div>
   );
 };
