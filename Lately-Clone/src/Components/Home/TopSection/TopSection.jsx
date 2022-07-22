@@ -8,8 +8,10 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const TopSection = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <Stack>
@@ -36,6 +38,7 @@ const TopSection = () => {
               display="flex"
               mt={"2em"}
               position="static"
+              onClick={()=>navigate("/signup")}
             >
               TRY IT FREE
             </Button>
