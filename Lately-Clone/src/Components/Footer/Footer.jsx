@@ -1,8 +1,7 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Styles from "../Footer/footer.module.css";
-import Home from "../Home/Home";
 
 const Data = {
   company: [

@@ -1,0 +1,19 @@
+.box{
+    padding: 4em 3em;
+    border-radius: 20px;
+    background-color: white;
+    background-image: url('https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fecf40bea5148a41aa207a7_pattern-light.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 149%;
+    background-size: contain;    
+}
+
+.mainBox{
+    padding: 3em 0em 7em 0em;
+    background-color: #e8f8f2;
+    background-image: url('https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7dd370ef398070c9aa574_home-hc3-background-image.png');
+    background-position: 50% 114%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #174c43;
+}
