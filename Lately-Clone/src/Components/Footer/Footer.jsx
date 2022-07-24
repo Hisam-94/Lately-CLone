@@ -7,6 +7,7 @@ const Data = {
   company: [
     {
       link: "About",
+      path:""
     },
     {
       link: "Leadership",
@@ -38,6 +39,7 @@ const Data = {
     },
     {
       link: "Product Overview",
+      path:""
     },
     {
       link: "AI Social Content Writer",
@@ -147,7 +149,7 @@ const Footer = () => {
             {Data.company.map((el) => (
               <div key={el.link}>
                 <Text>
-                  <Link className={Styles.footer} to={"/"}>
+                  <Link className={Styles.footer} to={"/company"}>
                     {el.link}
                   </Link>
                 </Text>
@@ -172,7 +174,7 @@ const Footer = () => {
           {Data.product.map((el) => (
             <div key={el.link}>
               <Text>
-                <Link className={Styles.footer} to={"/"}>
+                <Link className={Styles.footer} to={"/product"}>
                   {el.link}
                 </Link>
               </Text>
